@@ -2,6 +2,7 @@ const http = require('http');
 const url = require('url');
 const yaml = require('js-yaml');
 const fs = require('fs');
+const pathmodule = require('path');
 
 const hostname = 'localhost';
 const port = 3000;
