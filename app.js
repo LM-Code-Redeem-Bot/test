@@ -53,6 +53,10 @@ const server = http.createServer((req, res) => {
         res.setHeader('Content-Type', 'text/html; charset=UTF-8');
         res.end(htmlText);
     }
+    let webdriver = require("selenium-webdriver");
+    require("chromedriver");
+    let driver = new webdriver.Builder().forBrowser("chrome").build();
+    driver.get("https://www.geeksforgeeks.org/");
 });
     
 server.listen(port, hostname, () => {
