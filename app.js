@@ -2,8 +2,8 @@ const http = require('http');
 const url = require('url');
 const yaml = require('js-yaml');
 const fs = require('fs');
-const jsdom = require("jsdom");
-const pathmodule = require('path');
+// const jsdom = require("jsdom");
+// const pathmodule = require('path');
 
 
 const hostname = 'localhost';
@@ -54,16 +54,8 @@ const server = http.createServer((req, res) => {
             });
         }
     } else {
-        const queryObject = url.parse(req.url,true).query;
-        let searchName = '';
-        if (queryObject.songName) {
-            searchName = queryObject.songName;
-        }
         res.statusCode = 200;
         res.setHeader('Content-Type', 'text/html; charset=UTF-8');
-        let htmlText = findBySongName(searchName);
-        logDebugMessage(htmlText);
-
         res.end(htmlText);
     }
 });
