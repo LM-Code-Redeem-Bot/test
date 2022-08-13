@@ -8,7 +8,9 @@
   "main": "app.js",
   "dependencies": {
     "js-yaml": "^4.1.0",
-    "jsdom": "^19.0.0"
+    "jsdom": "^19.0.0",
+    "selenium-webdriver": "*",
+    "chromedriver" : "*"
   },
   "scripts": {
     "start": "node app.js"
