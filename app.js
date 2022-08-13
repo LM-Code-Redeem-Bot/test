@@ -2,17 +2,11 @@ const http = require('http');
 const url = require('url');
 const yaml = require('js-yaml');
 const fs = require('fs');
-// const jsdom = require("jsdom");
-// const pathmodule = require('path');
-
 
 const hostname = 'localhost';
 const port = 3000;
 const baseDir = __dirname + "/";
 const debug = false;
-
-const { JSDOM } = jsdom;
-
 
 function readTemplateFile(fileName) {
     let templHtml = '';
